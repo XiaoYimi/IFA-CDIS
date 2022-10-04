@@ -1,5 +1,5 @@
 <template>
-  <router-view :key="$route" />
+  <router-view />
 </template>
 
 <script setup lang="ts"></script>

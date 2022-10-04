@@ -43,9 +43,19 @@ export declare interface CoresAxiosProxyConfig extends AxiosProxyConfig {}
 export declare interface CoresAxiosBasicCredentials
   extends AxiosBasicCredentials {}
 
+export declare type CoresAxiosMethod = 'get' | 'post' | 'delete' | 'put';
+
+export declare interface CoresBaseAxios {
+  baseURL: string;
+  timeout: number;
+  getConfig(): any;
+  interceptors(): any;
+  request(options: CoresAxiosRequestConfig): any;
+}
+
 export declare interface CoresAxiosResult<T = any> {
   code: number;
   type: 'success' | 'warning' | 'error';
-  message: string;
+  msg: string;
   result: T;
 }
